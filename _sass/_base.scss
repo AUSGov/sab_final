@@ -1,0 +1,254 @@
+/* GLOBAL */
+
+// FIXES to CSS styles copied across from BGA.
+html, body {
+    overflow-x: hidden;
+}
+h1, h2, h3, 
+.support-pathway-wrapper .support-pathway label {
+    font-weight: 600 !important;
+}
+
+.page-header .page-header-backgroundIcon .svg-container {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    padding: 0 0 2rem 2rem;
+}
+#page-header .page-header-intro p {
+    font-size: 18px;
+}
+
+.anchor-menu {
+    .sticky-container {
+        a {
+            text-decoration: none;
+            
+            &.active-sticky {
+                font-weight: 700;
+                border-left: 4px solid $blue-light;
+                padding-left: 16px;
+            }
+        }
+    }
+}
+
+.c-padding-bottom {
+    p:last-child, 
+    ol:last-child,
+    ul:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.search-bar-wrapper 
+.search-bar-inner-wrapper 
+.search-bar-search
+.input-group-container {
+    input {
+        display: inline-block;
+        position: absolute;
+        right: 50px;
+        width: 180px !important;
+    }
+    span {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        
+        button {
+            width: 50px;
+        }
+    }
+}
+@media (max-width: 900px) {
+    .search-bar-wrapper {
+        height: 50px;
+        
+        .search-bar-container {
+            display: none !important;
+        }
+    }
+}
+a.breadcrumb-link
+.hero-pathway-list-illustration-bg {
+    display: none !important;
+}
+.col-lg-4, 
+.col-sm-6 {
+    .hero-pathway-list-illustration-image {
+        display: none !important;
+    }
+    .hero-pathway-list-illustration-bg {
+        display: none !important;
+    }
+    .hero-pathway-list-content-left {
+        flex: initial !important;
+    }
+}
+footer {
+    box-shadow: 0 50vh 0 50vh #18335C;
+}
+
+// MAIN NAVIGATION including dropdown hover functionality
+#navigation-bar {
+    .navigation-main-menu:hover {
+        background: $blue-active;
+    }   
+    .dropdown {
+        background: url("../assets/Icon-chevron-down.svg") no-repeat;
+        background-position: center right 15px;
+        padding: 0px 25px 0px 0px;
+        
+        &:hover{
+            background:  $blue-active url("../assets/Icon-chevron-up.svg") no-repeat;
+            background-position: center right 15px;
+            > .dropdown-menu {
+                display: block;
+            } 
+        }
+    }
+    .dropdown-submenu {
+        &:hover > .dropdown-menu {
+            display: block;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .dropdown-toggle {
+        color: $white;
+        opacity: 1.0;
+        text-align: left;
+        cursor: default;
+        
+        &:after {
+            display: none;
+        }
+    }
+    .dropdown-menu {
+        background: $blue-active;
+        padding: 0;
+        border: none !important;
+        border-radius: 0px !important;
+        cursor: pointer !important;
+        margin-top: 0px;
+        width: 280px;
+        
+        a {
+            text-decoration: none;
+            padding: 0 30px 0 5px;
+            color: $white;
+            
+            &.dropdown-item:focus, &.dropdown-item:hover {
+                background: none;
+                text-decoration: underline !important;
+            }
+        }
+        
+        li {
+            font-weight: 400;
+            list-style-type: none;
+            border-bottom: 1px solid $blue-primary-mid;
+            font-size: 0.9em;
+            padding: 10px;
+            position: relative;
+            
+            &:hover {
+                background: $blue-active-darkest;
+            }
+            
+            .dropdown-menu { 
+                width: 300px;
+                position: absolute;
+                top: 0px !important;
+                left: 280px !important;
+                background: $teal-sab-darkest;
+                padding:0;
+                
+                li {
+                    font-weight: 400;
+                    border-bottom: 1px solid $blue-primary;
+                    border-left: 1px solid $blue-primary;
+                    font-size: 0.88rem;
+                    background: $blue-active-darkest;
+                }
+            }
+        }
+            
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .col-sm-6 {
+        .hero-pathway-list-illustration-image {
+            display: flex !important;
+        }
+        .hero-pathway-list-content-left {
+            flex: 1 !important;
+        }
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .hero-pathway-list-illustration-bg,
+    .hero-pathway-list-illustration-image {
+        display: none !important;
+    }
+    .hero-pathway-list-content-left {
+        flex: initial !important;
+    } 
+}
+
+
+@media only screen and (max-width: 900px) {
+    .navigation-bar-wrapper {
+        display: none;
+    }
+    
+    .search-bar-wrapper {
+        background: $blue-primary url("../assets/Icon-menu.svg") no-repeat;
+        background-size: 20px 16px;
+        background-position: center right 15px;   
+    }
+    
+    .search-bar-wrapper .search-bar-inner-wrapper .search-bar-search .input-group-container {
+        input {
+            display: none;
+        }
+        button {
+            position: absolute;
+            right: 0px;
+            top: 10px;
+        }
+    }
+    
+    .hero-pathway-list-illustration-bg {
+        display: none !important;
+    }
+    
+    .col-sm-6 {
+        .hero-pathway-list-illustration-image {
+            display: none !important;
+        }
+        .hero-pathway-list-content-left {
+            flex: initial !important;
+        }
+    } 
+}
+
+@media only screen and (max-width: 618px) {
+    .hero-pathway-list-illustration-bg,
+    .hero-pathway-list-illustration-image {
+        display: none !important;
+    }
+    .hero-pathway-list-content-left {
+        flex: initial !important;
+    }
+
+}

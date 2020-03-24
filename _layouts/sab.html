@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+
+<body class="au-grid">
+
+    <!-- HEADER -->
+    <div class="header-wrapper">
+        <div class="header">
+            {% include header.html %}
+        </div>
+    </div>
+    
+     <!-- GUIDE MENU TOGGLE -->
+    
+    
+    <!-- BREADCRUMB -->
+   
+        
+        <div style="background-color:" class="c-wrapper c-wrapper-bg-transparent breadcrumbs-wrapper container-fluid" data-reactroot="">
+            <div class="row">
+                <div class="breadcrumb-home-wrapper"><a href={{ "/pages-landing/sab.html" | relative_url }} class="breadcrumb-link sab-return-link">Guide to starting a business</a> 
+                </div>
+               
+            </div>
+        </div>
+   
+    
+    
+    <!-- CONTENT -->
+    <div id="sab-landing-1">
+        {{ content }}
+    </div>
+    
+    
+
+    <!-- FOOTER -->
+    <div class="footer-wrapper">
+        <div class="footer">
+            {% include footer.html %}
+        </div>
+    </div>
+    
+    
+    <!-- GUIDE NAV PANEL -->
+    {% include guide_nav_1.html %}
+
+</body>
+
+</html>
