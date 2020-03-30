@@ -199,6 +199,7 @@
                     padding: 0 10px;
                     border-radius: 16px;
                     margin-left: 10px;
+                    text-align: center;
                 }
 
                 span.optional {
@@ -209,15 +210,22 @@
                     padding: 0 10px;
                     border-radius: 16px;
                     margin-left: 10px;
+                    text-align: center;
                 }
-                @media (max-width: 400px) {
+                @media (max-width: 960px) {
                     span {
                         margin: 8px 0 0 0 !important;
+                        display: block !important;
+                        width: 85px;
                     }
                 }
             }
         }
-
+        .legacy-sectionCard .card-item .card-body ul li:before {
+            border: #c18100 3px solid;
+            height: 6px;
+            width: 6px;
+        }
         .legacy-topicCard .card-item .card-text {
             margin-bottom: 64px;
         }
